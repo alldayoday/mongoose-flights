@@ -10,11 +10,22 @@ function create(req, res) {
   flight.save(function(err) {
 		if (err) {return res.redirect('/flights/new')
 }
-    res.redirect('/flights/new')
+    res.redirect('/flights')
+  })
+}
+
+function index(req, res) {
+  Flight.find({}, function (error, flights) {
+    console.log(error)
+    res.render("flights/index", {
+      error: error,
+      flights: flights,
+    })
   })
 }
 
 export {
   newFlight as new,
   create,
+  index
 }
