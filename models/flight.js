@@ -20,7 +20,8 @@ const flightSchema = new Schema({
   departs:  {
     type: Date,
     default: new Date().setFullYear()
-}})
+  }
+})
 
 const Flight = mongoose.model('Flight', flightSchema)
 
