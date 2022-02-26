@@ -8,6 +8,31 @@
   <title>New Flight</title>
 </head>
 <body>
-  <h1>Enter a New Movie</h1>
+  <h1>Enter a New Flight</h1>
+  <form action="/movies" method="POST">
+    <label>Flight Number:
+      <input type="text" name="flightNo">
+    </label><br>
+    <label>Airport:
+      <select name="airport">
+        <option value="AUS">AUS</option>
+        <option value="DFW">DFW</option>
+        <option value="DEN">DEN</option>
+        <option value="LAX">LAX</option>
+        <option value="SAN">SAN</option>
+      </select>
+    </label><br>
+    <label>Airline:
+      <select name="airline">
+        <option value="American">American</option>
+        <option value="Southwest">Southwest</option>
+        <option value="United">United</option>
+      </select>
+    </label><br>
+    <label>Departs:
+      <input type="text" name="departs">
+    </label><br>
+    <button type="submit">Add Flight</button>
+  </form>
 </body>
 </html>
