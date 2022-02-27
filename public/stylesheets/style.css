@@ -67,8 +67,8 @@ th {
 td {
   text-align:center;
   padding: 10px;
-  border: 1px solid black;
-  border-right: none;
-  border-left: none;
+  border: 1px  dotted rgb(211, 207, 207);
+  border-right: 1px dotted rgb(211, 207, 207);
+  border-left: 1px dotted rgb(211, 207, 207);
 }
 
