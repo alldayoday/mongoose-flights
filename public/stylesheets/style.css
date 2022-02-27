@@ -10,7 +10,7 @@ a {
 li {
   display: inline;
   padding: 10px;
-  margin: 10px;
+  margin: 20px;
 }
 
 ul {
@@ -49,4 +49,18 @@ form {
 
 input {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+table {
+  border-collapse: collapse;
+  width: 70%;
+  
+}
+th {
+  background-color: rgb(137, 190, 207);
+  Color:white;
+}
+th, td {
+  text-align:center;
+  padding:5px
 }
