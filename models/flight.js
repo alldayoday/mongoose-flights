@@ -1,6 +1,5 @@
 import mongoose from 'mongoose'
 
-// optional shortcut to the mongoose.Schema class
 const Schema = mongoose.Schema
 	
 const flightSchema = new Schema ({
@@ -10,20 +9,19 @@ const flightSchema = new Schema ({
   },
   airport: {
     type: String,
-    enum: ['AUS', 'DFW', 'DEN', 'LAX', 'SAN', 'BOS'],
+    enum: ['AUS', 'DFW', 'DEN', 'LAX', 'SAN'],
     default: 'DEN'
   },
   flightNo: {
     type: Number,
     min: 10,
-    max: 9999
+    max: 9999,
   },
   departs: {
     type: Date,
     default: function() {
-      return (new Date().getFullYear() + 1)
-    }
-  }
+      return Date.now() + 365*24*60*60000
+  }}
 }, {
   timestamps: true
 })

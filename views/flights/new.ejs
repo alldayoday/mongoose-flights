@@ -13,7 +13,7 @@
     <li><a href="/flights">All Flights</a></li>
     <li><a href="/flights/new">New Flight</a></li>
   </ul>
-  <h1>Enter a New Flight</h1>
+  <h1>Book a New Flight</h1>
   <form action="/flights" method="POST">
     <label>Flight Number:
       <input type="text" name="flightNo" class="flightno">
@@ -35,9 +35,9 @@
       </select>
     </label><br>
     <label>Departs:
-      <input type="datetime-local" value="2022-03-01T00:00:00" name="departs" class="dates">
+      <input type="datetime-local" name="departs" value="departsDate"class="dates">
     </label><br>
-    <button type="submit">Add Flight</button>
+    <button type="submit">Book Flight</button>
   </form>
 </body>
 </html>
