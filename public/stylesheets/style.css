@@ -22,7 +22,8 @@ ul {
 button {
   background-color: rgb(137, 190, 207);
   font-weight: 400;
-  margin: 10px;
+  margin: 10px 0 10px 20px;
+  padding: 10px;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 

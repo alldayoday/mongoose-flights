@@ -6,7 +6,6 @@ function newFlight(req, res) {
 }
 
 function create(req, res) {
-  console.log(req.body)
   const flight = new Flight(req.body)
   console.log(flight)
   flight.save(function(err) {
