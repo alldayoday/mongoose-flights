@@ -21,6 +21,7 @@
         <th>Airport</th>
         <th>Airline</th>
         <th>Departing</th>
+        <th>Booking</th>
       </tr>
     </thead>
     <tbody>
@@ -30,7 +31,7 @@
           <td><%= flight.airport %></td>
           <td><%= flight.airline %></td>
           <td><%= flight.departs %></td>
-          <td><a href="/flights/<%= flight._id %>">DETAILS</a></td>
+          <td><a href="/flights/<%= flight._id %>">Book</a></td>
         </tr>
       <% }) %>
     </tbody>

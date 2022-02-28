@@ -36,6 +36,8 @@ input {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   padding: 3px;
   font-size: 13px;
+  border-radius: 10px;
+  margin: 5px;
 }
 
 table {
