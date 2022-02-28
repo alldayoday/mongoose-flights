@@ -31,6 +31,36 @@
     <td><%= flight.departs %></td>
 </tbody>
 </table>
+  <h2>Reviews</h2>
+  <form 
+    id="add-ticket-form"
+    action="/flights/<%= flight._id %>/tickets"
+    method="POST"
+  >
+  <label>Seat:
+    <input type="text" name="seat" required pattern="[A-F][1-9]\d?">
+  </label><br>
+  <label>Price:
+    <input type="text" name="price">
+  </label><br>
+    <button type="submit">Book Ticket</button>
+  </form>
+    <table>
+      <thead>
+        <tr>
+          <th>Seat</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% flight.tickets.forEach(function(ticket) { %>
+          <tr>
+            <td><%= ticket.seat %></td>
+            <td><%= ticket.price %></td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
 </main>
 </body>
 </html>
