@@ -2,12 +2,12 @@ import { Flight } from "../models/flight.js"
 
 
 function newFlight(req, res) {
-  // const newFlight = new Flight();
-  // // Obtain the default date
-  // const dt = newFlight.departs;
-  // // Format the date for the value attribute of the input
-  // const departsDate = dt.toISOString().slice(0, 16);
-  res.render('flights/new');
+  const newFlight = new Flight();
+  // Obtain the default date
+  const dt = newFlight.departs;
+  // Format the date for the value attribute of the input
+  const departsDate = dt.toISOString().slice(0, 16);
+  res.render('flights/new', {departsDate});
 }
 
 function create(req, res) {
@@ -27,6 +27,10 @@ function create(req, res) {
 
 function index(req, res) {
   Flight.find({}, function (error, flights) {
+    // const today = new Date().getTime()
+    // if (Flight.departs < today) {
+    //   Flight.departs.style.color="red"
+    // }
     console.log(error)
     res.render("flights/", {
       error: error,
