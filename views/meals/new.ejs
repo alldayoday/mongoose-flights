@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <title>New Flight</title>
+</head>
+<nav>
+  <a href="/">Home</a>
+  <a href="/flights">All Flights</a>
+  <a href="/flights/new">New Flight</a>
+  <a href="/meals/new">Flight Meals</a>
+</nav>
+<body>
+<main>
+	<h1><%= title %></h1>
+  <p>Please first ensure that the Performer is not in the dropdown
+    <select>
+      <% meals.forEach(function(meal) { %>
+        <option><%= meal.name %></option>
+      <% }) %>
+    </select>
+  </p>
+  <form id="add-meal-form" action="/meals" method="POST">
+    <label for="name-input">Name:</label>
+    <input type="text" name="name" id="name-input">
+    <button type="submit">Add Meal</button>
+  </form>
+</main>
+</body>
+</html>
