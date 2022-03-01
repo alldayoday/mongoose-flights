@@ -62,6 +62,23 @@
         <% }) %>
       </tbody>
     </table>
+  </table>
+  <h2>Meals</h2>
+  <ul>
+    <% flight.eats.forEach(eat => { %>
+      <li><%= eat.name %></li>
+    <% }) %>
+  </ul>
+  <%# end cast list %>
+  <form id="add-per-to-eats" action="/flights/<%= flight._id %>/meals" method="POST">
+    <select name="mealId">
+      <% meals.forEach(meal => { %>
+        <option value="<%= meal._id %>"><%= meal.name %></option>
+      <% }) %>
+    </select>
+    <button type="submit">Add Meal</button>
+  </form>
+    <table>
 </main>
 </body>
 </html>

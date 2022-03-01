@@ -7,6 +7,7 @@ router.get('/new', mealsCtrl.new)
 
 router.post('/', mealsCtrl.create)
 
+// router.post('/:id/meals', mealsCtrl.addToMeal);
 
 export {
   router

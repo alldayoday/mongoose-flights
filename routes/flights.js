@@ -8,7 +8,7 @@ router.post('/', flightsCtrl.create)
 router.get('/:id', flightsCtrl.show)
 router.post('/:id/tickets', flightsCtrl.createTicket)
 router.delete("/:id", flightsCtrl.delete)
-
+router.post('/:id/meals', flightsCtrl.addToEat);
 
 export {
 	router
