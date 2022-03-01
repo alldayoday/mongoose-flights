@@ -26,11 +26,7 @@ function create(req, res) {
 }
 
 function index(req, res) {
-  Flight.find({}, function (error, flights) {
-    // const today = new Date().getTime()
-    // if (Flight.departs < today) {
-    //   Flight.departs.style.color="red"
-    // }
+  Flight.find({}).sort({departs: 'asc'}).exec ((error, flights) => {
     console.log(error)
     res.render("flights/", {
       error: error,
@@ -62,7 +58,6 @@ function deleteFlight(req,res) {
     res.redirect('/flights')
   })
 }
-
 
 export {
   newFlight as new,
