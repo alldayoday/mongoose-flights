@@ -16,6 +16,25 @@ li {
   font-size: 16px;
 }
 
+li.foods {
+  display: block;
+  font-size: 12px;
+  margin: 0;
+  background-color: aliceblue;
+  width: 40%;
+  text-align: center;
+  border-top: 2px solid midnightblue;
+  padding: 3px;
+}
+
+select {
+  color: midnightblue;
+  background-color: aliceblue;
+  padding: 5px;
+  border-radius: 10px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
 nav {
   background-color: midnightblue;
   padding: 20px;
